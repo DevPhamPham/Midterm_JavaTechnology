@@ -87,17 +87,26 @@ Một số api endpoint đòi hỏi người dùng cần phải đăng nhập v�
 Mô tả chi tiết về các api endpoints như sau:
 
 <h3>ProductAPI:</h3>
+
 + Phân quyền bên Admin:
+  
   + [DELETE] /api/products/{id}  ---  xóa sản phẩm dựa trên id truyền vào
-    ![Alt text](./src/main/resources/readme/delete_api_product.png "delete_api_product")
-  + [PUT] /api/products/  ---  chỉnh sửa sản phẩm dựa vào id truyền vào
-    ![Alt text](./src/main/resources/readme/put_api_product_noneId.png "put_api_product_noneId")
     
+    ![Alt text](./src/main/resources/readme/delete_api_product.png "delete_api_product")
+    
+  + [PUT] /api/products/  ---  chỉnh sửa sản phẩm dựa vào id truyền vào
+    
+    ![Alt text](./src/main/resources/readme/put_api_product_noneId.png "put_api_product_noneId")
+    none_id
     ![Alt text](./src/main/resources/readme/put_api_product_haveId.png "put_api_product_haveId")
+    have_id
+    
   + [POST] /api/products/  ---  thêm sản phẩm
+    
     ![Alt text](./src/main/resources/readme/post_api_product.png "delete_api_product")
 
 + Phân quyền cả User và Admin: 
+  
   + [GET] /api/products/ --- get tất cả sản phẩm
     ![Alt text](./src/main/resources/readme/get_api_product.png "get_api_product")
   + [GET] /api/products/category/{id}  --- get sản phẩm theo category id
@@ -106,24 +115,43 @@ Mô tả chi tiết về các api endpoints như sau:
     ![Alt text](./src/main/resources/readme/get_api_product_id.png "get_api_product_id")
     
 <h3>CartAPI:</h3>
+
 + Phân quyền bên Admin:
+  
   + [GET] /api/carts ---- Lấy tất cả giỏ hàng
+    
     ![Alt text](./src/main/resources/readme/get_cart_api.png "get_cart_api")
+    
   + [GET] /api/carts/user/{userId} ----Lấy thông tin giỏ hàng theo user_id
+    
     ![Alt text](./src/main/resources/readme/get_api_cart_userId.png "get_api_cart_userId")
+  
 + Phân quyền bên User:
+  
   + [POST] /api/carts ---- Tạo giỏ hàng mới
+    
     ![Alt text](./src/main/resources/readme/post_api_cart.png "post_api_cart")
+    
   + [PUT] /api/carts/{cartId} ---- Cập nhật thông tin giỏ hàng
+    
     ![Alt text](./src/main/resources/readme/put_api_cart.png "put_api_cart")
+    
   + [DELETE] /api/carts/{cartId} ---- Xóa giỏ hàng theo ID
+    
     ![Alt text](./src/main/resources/readme/delete_api_cart.png "delete_api_cart")
+    
   + [POST] /api/carts/{cartId}/cart-item ---- Thêm sản phẩm vào giỏ hàng
+    
     ![Alt text](./src/main/resources/readme/post_api_cart_id_cartItem.png "post_api_cart_id_cartItem")
+    
   + [PUT] /api/carts/{cartId}/cart-item/{cartItemId} ----Cập nhật thông tin sản phẩm trong giỏ hàng
+    
     ![Alt text](./src/main/resources/readme/put_api_cart_id_cartItem.png "put_api_cart_id_cartItem")
+    
   + [DEL] /api/carts/{cartId}/cart-item/{cartItemId}----Xóa sản phẩm khỏi giỏ hàng
+    
     ![Alt text](./src/main/resources/readme/del_api_cart_id_cartItem.png "del_api_cart_id_cartItem")
+  
 
 + Phân quyền cả User và Admin:
   + [GET] /api/carts/{cartId}----Lấy thông tin giỏ hàng theo ID
